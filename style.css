@@ -1,0 +1,60 @@
+body {
+  margin: 90px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: normal;
+  font-family: 'Vazirmatn', sans-serif;
+  color: white;
+
+  /* بک‌گراند عکس */
+  background-image: url('start.jpg'); /* مسیر عکس */
+  background-size: cover;      /* عکس کل صفحه رو پوشش بده */
+  background-position: center; /* وسط عکس قرار بگیره */
+  background-repeat: no-repeat; /* تکرار نشه */
+   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('start.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+.title{
+  font-size: 3em;
+  white-space: nowrap;          /* متن تو یک خط بمونه */
+  overflow: hidden;             /* مخفی کردن باقی متن */
+  border-right: 4px solid white;/* شبیه نشانگر تایپ */
+  width: 0;                     /* شروع از صفر */
+  animation: typing 3s steps(15, end) forwards, blink 0.7s step-end 3s;   
+}
+.welcome{
+    font-size: 1.5em;
+    opacity: 0;
+    animation: fadeIn 8s ease 3s forwards;  
+    display: inline-block; 
+    padding: 5px 15px; 
+    background-color: rgba(138, 138, 138, 0.796);
+    border-radius: 1cm;
+}
+@keyframes moveBg{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+@keyframes fadeIn{
+    to{opacity: 1;}
+}
+/* انیمیشن تایپ */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 11ch; }
+}
+
+/* چشمک زدن نشانگر */
+@keyframes blink {
+  50% { border-color: transparent; }
+  100% { border-color: transparent; } /* وقتی انیمیشن تموم شد، نشانگر مخفی میشه */
+}
