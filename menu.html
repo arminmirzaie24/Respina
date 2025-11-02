@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منوی کافه</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <h1 class="menu-title">منوی کافه ☕</h1>
+
+  <div class="category-buttons">
+    <button class="active" onclick="showCategory('hot')">نوشیدنی گرم</button>
+    <button onclick="showCategory('cold')">نوشیدنی سرد</button>
+    <button onclick="showCategory('cakes')">کیک‌ها</button>
+    <button onclick="showCategory('cakes')">کیک‌ها</button>
+    <button onclick="showCategory('cakes')">کیک‌ها</button>
+    <button onclick="showCategory('cakes')">کیک‌ها</button>
+    <button onclick="showCategory('cakes')">کیک‌ها</button>
+    <button onclick="showCategory('c')">غذا</button>
+
+  </div>
+
+  <div class="menu-grid">
+
+    <div class="menu-card hot">
+      <img src="images/latte.jpg" alt="لاته">
+      <h3>لاته</h3>
+      <p>قهوه اسپرسو با شیر بخار دیده</p>
+      <span class="price">۸۵,۰۰۰ تومان</span>
+    </div>
+
+    <div class="menu-card cold">
+      <img src="images/iced-coffee.jpg" alt="آیس کافی">
+      <h3>آیس کافی</h3>
+      <p>قهوه سرد با شیر و یخ</p>
+      <span class="price">۹۵,۰۰۰ تومان</span>
+    </div>
+
+    <div class="menu-card c">
+      <img src="images/cake.jpg" alt="کیک شکلاتی">
+      <h3>کیک شکلاتی</h3>
+      <p>کیک نرم با سس داغ شکلات</p>
+      <span class="price">۷۵,۰۰۰ تومان</span>
+    </div>
+
+  </div>
+
+  <script>
+    function showCategory(category) {
+      const cards = document.querySelectorAll('.menu-card');
+      const buttons = document.querySelectorAll('.category-buttons button');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      cards.forEach(card => {
+        if (card.classList.contains(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // نمایش اولیه‌ی دسته‌ی اول
+    showCategory('hot');
+  </script>
+</body>
+</html>

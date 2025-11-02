@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap');
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  background-color: #f5eee6;
+  margin: 0;
+  padding: 20px;
+  direction: rtl;
+  /* بک‌گراند عکس */
+  background-image: url('backmenu.jpg'); /* مسیر عکس */
+  background-size: cover;      /* عکس کل صفحه رو پوشش بده */
+  background-position: center; /* وسط عکس قرار بگیره */
+  background-repeat: no-repeat; /* تکرار نشه */
+   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('backmenu.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;}
+
+.menu-title {
+  text-align: center;
+  color: #3e2723;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.category-buttons {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.category-buttons button {
+  background: #d7ccc8;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.category-buttons button.active,
+.category-buttons button:hover {
+  background: #4e342e;
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-card h3 {
+  margin: 12px 0 6px;
+  color: #4e342e;
+}
+
+.menu-card p {
+  margin: 0 0 10px;
+  color: #6d4c41;
+  font-size: 0.9rem;
+}
+
+.price {
+  background: #3e2723;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
